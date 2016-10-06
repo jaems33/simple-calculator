@@ -59,6 +59,12 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func touchOperator(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func touchDecimal(_ sender: UIButton) {
+    }
     
     // Adding sample comment
     override func didReceiveMemoryWarning() {

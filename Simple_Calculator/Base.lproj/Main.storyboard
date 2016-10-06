@@ -46,6 +46,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="DIN-Light" family="DIN-Light" pointSize="30"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nfi-WK-fW1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWy-r7-5AR" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
                                 <frame key="frameInset" minX="90" minY="355" width="46" height="42"/>
@@ -143,7 +146,7 @@
                                 <fontDescription key="fontDescription" name="DIN-Light" family="DIN-Light" pointSize="24"/>
                                 <state key="normal" title="."/>
                                 <connections>
-                                    <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F7z-a0-QCt"/>
+                                    <action selector="touchDecimal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D4A-hQ-xer"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yin-Eu-pg8" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
@@ -152,7 +155,7 @@
                                 <fontDescription key="fontDescription" name="DIN-Light" family="DIN-Light" pointSize="30"/>
                                 <state key="normal" title="="/>
                                 <connections>
-                                    <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bax-Ra-1pu"/>
+                                    <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TjX-C7-Dj4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unL-ju-ruD" userLabel="Display Button">
