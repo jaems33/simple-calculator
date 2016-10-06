@@ -149,10 +149,19 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yin-Eu-pg8" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
                                 <frame key="frameInset" minX="145" minY="525" width="46" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="DIN-Light" family="DIN-Light" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="DIN-Light" family="DIN-Light" pointSize="30"/>
                                 <state key="normal" title="="/>
                                 <connections>
                                     <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bax-Ra-1pu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unL-ju-ruD" userLabel="Display Button">
+                                <frame key="frameInset" minX="35" minY="52" width="301" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DIN-Light" family="DIN-Light" pointSize="72"/>
+                                <state key="normal" title="0"/>
+                                <connections>
+                                    <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vj2-dB-6Em"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -161,6 +170,9 @@
                             <outletCollection property="gestureRecognizers" destination="4lx-p5-ff3" appends="YES" id="5Uq-WU-ooS"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="displayButton" destination="unL-ju-ruD" id="pw5-i5-c5R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="4lx-p5-ff3">
@@ -169,7 +181,7 @@
                     </connections>
                 </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="127" y="144"/>
+            <point key="canvasLocation" x="-428" y="182"/>
         </scene>
     </scenes>
 </document>

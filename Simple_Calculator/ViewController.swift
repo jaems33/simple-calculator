@@ -12,15 +12,53 @@ class ViewController: UIViewController {
 
     var gradientLayer: CAGradientLayer!
     
+    @IBOutlet weak var displayButton: UIButton!
+    
+    fileprivate var userIsInTheMiddleOfTyping = false
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         createGradientLayer()
+        
+        displayButton.setTitleColor(UIColor.white, for: .normal)
+        displayButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        
     }
     
+    
     @IBAction fileprivate func touchDigit(_ sender: UIButton) {
-        print("Hello!")
+
+        let digit = sender.currentTitle!
+        
+        if userIsInTheMiddleOfTyping == false {
+            // Necessary to prevent button from constantly re-animating upon title change
+            UIView.performWithoutAnimation {
+                displayButton.setTitle(digit, for: .normal)
+                displayButton.layoutIfNeeded()
+            }
+        }
+        else {
+            UIView.performWithoutAnimation {
+                displayButton.setTitle(digit + displayButton.currentTitle!, for: .normal)
+                displayButton.layoutIfNeeded()
+            }
+        }
+
+        userIsInTheMiddleOfTyping = true
+
     }
+    
+    var displayValue: Double {
+        get {
+            return Double(displayButton.currentTitle!)!
+        }
+        set {
+            displayButton.setTitle(String(newValue), for: .normal)
+        }
+    }
+    
     
     // Adding sample comment
     override func didReceiveMemoryWarning() {
@@ -40,9 +78,4 @@ class ViewController: UIViewController {
         gradientLayer.zPosition = -1
     }
 
-    @IBAction func PanView(sender: UIScreenEdgePanGestureRecognizer) {
-        let top = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0).cgColor
-        let bottom = UIColor(red: 93.0/255.0, green: 192.0/255.0, blue: 235.0/255.0, alpha: 1.0).cgColor
-        gradientLayer.colors = [top, bottom]
-    }
 }

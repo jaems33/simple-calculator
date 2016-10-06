@@ -15,8 +15,10 @@ public class UnderlinedButton: UIButton {
         
         super.init(coder: aDecoder)
         
+        let borderColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.1)
+        
         self.setTitleColor(UIColor.white, for: .normal)
-        self.addBorder(side: .Bottom, color: .white, borderwidth: 1)
+        self.addBorder(side: .Bottom, color: borderColor, borderwidth: 1)
         
     }
     
