@@ -16,20 +16,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         createGradientLayer()
-        
-        digit.setTitleColor(UIColor.white, for: .normal)
-        digit.layer.borderColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0).cgColor
-        
     }
     
-    @IBOutlet weak var digit: UIButton!
-    
-    @IBAction private func touchDigit(sender: UIButton) {
-    
+    @IBAction fileprivate func touchDigit(_ sender: UIButton) {
+        print("Hello!")
     }
-  
     
-    // Adding sample comment
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -53,4 +45,3 @@ class ViewController: UIViewController {
         gradientLayer.colors = [top, bottom]
     }
 }
-
