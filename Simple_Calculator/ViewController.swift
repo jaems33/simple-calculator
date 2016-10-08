@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     @IBAction func clearDisplay(_ sender: UIButton) {
         displayButton.setTitle("0", for: .normal)
         userIsInTheMiddleOfTyping = false
+        brain.setOperand(0.0)
     }
     
     @IBAction fileprivate func touchDigit(_ sender: UIButton) {
@@ -48,7 +49,7 @@ class ViewController: UIViewController {
         }
         else {
             UIView.performWithoutAnimation {
-                displayButton.setTitle(digit + displayButton.currentTitle!, for: .normal)
+                displayButton.setTitle(displayButton.currentTitle! + digit, for: .normal)
                 displayButton.layoutIfNeeded()
             }
         }
