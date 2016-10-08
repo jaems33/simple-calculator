@@ -14,12 +14,12 @@ public enum UIButtonBorderSide {
 }
 
 extension UIButton {
-   
+    
     public func addBorder(side: UIButtonBorderSide, color: UIColor, borderwidth: CGFloat){
         
         let border = CALayer()
         border.backgroundColor = color.cgColor
-        
+                
         switch side {
             case .Bottom:
             border.frame = CGRect(x:0, y: self.frame.size.height - borderwidth, width: self.frame.size.width, height: borderwidth)
@@ -27,6 +27,10 @@ extension UIButton {
         
         self.layer.addSublayer(border)
         
+    }
+    
+    public func resizeBorder(){
+        self.layer.sublayers!.first!.frame = CGRect(x:0, y: self.frame.size.height - 1, width: self.frame.size.width, height: 1)
     }
     
 }
