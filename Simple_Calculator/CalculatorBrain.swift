@@ -11,16 +11,23 @@ import Foundation
 class CalculatorBrain {
     
     fileprivate var accumulator = 0.0
-    
     fileprivate var pending:PendingBinaryOperation?
     
+    func setOperand(_ operand:Double){
+        accumulator = operand
+    }
     
     var operations: [String: Operation] = [
-        "+" : Operation.binaryOperation({$0 + $1})
+        "+" : Operation.binaryOperation({$0 + $1}),
+        "-" : Operation.binaryOperation({$0 - $1}),
+        "÷" : Operation.binaryOperation({$0 / $1}),
+        "×" : Operation.binaryOperation({$0 * $1}),
+        "=" : Operation.equals
     ]
     
     enum Operation {
         case binaryOperation((Double, Double) -> Double)
+        case equals
     }
     
     func performOperation(_ symbol:String){
@@ -29,6 +36,8 @@ class CalculatorBrain {
             case .binaryOperation(let function):
                 executePendingBinaryOperation()
                 pending = PendingBinaryOperation(binaryFunction: function, firstOperand: accumulator )
+            case .equals:
+                executePendingBinaryOperation()
             }
         }
     }

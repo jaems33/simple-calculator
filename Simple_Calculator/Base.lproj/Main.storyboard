@@ -55,6 +55,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsP-oh-yip" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
                                                         <fontDescription key="fontDescription" name="DIN-Light" family="DIN-Light" pointSize="30"/>
                                                         <state key="normal" title="÷"/>
+                                                        <connections>
+                                                            <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAs-6E-XIl"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -84,6 +87,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96S-g2-Ykj" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
                                                         <fontDescription key="fontDescription" name="DIN-Light" family="DIN-Light" pointSize="30"/>
                                                         <state key="normal" title="×"/>
+                                                        <connections>
+                                                            <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vNU-Ye-y4o"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -113,6 +119,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4IM-QR-JvD" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
                                                         <fontDescription key="fontDescription" name="DIN-Light" family="DIN-Light" pointSize="30"/>
                                                         <state key="normal" title="−"/>
+                                                        <connections>
+                                                            <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tGu-ZJ-MqD"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -143,7 +152,7 @@
                                                         <fontDescription key="fontDescription" name="DIN-Light" family="DIN-Light" pointSize="30"/>
                                                         <state key="normal" title="+"/>
                                                         <connections>
-                                                            <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nfi-WK-fW1"/>
+                                                            <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XwP-o9-Jz6"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -152,20 +161,33 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unL-ju-ruD" userLabel="Display Button">
-                                <frame key="frameInset" minX="35" minY="52" width="301" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unL-ju-ruD" userLabel="Display Button">
                                 <fontDescription key="fontDescription" name="DIN-Light" family="DIN-Light" pointSize="72"/>
                                 <state key="normal" title="0"/>
                                 <connections>
                                     <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vj2-dB-6Em"/>
                                 </connections>
                             </button>
+                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGV-Cb-m1U">
+                                <frame key="frameInset" minX="313" minY="60" width="30" height="100"/>
+                                <fontDescription key="fontDescription" name="DIN-Light" family="DIN-Light" pointSize="36"/>
+                                <state key="normal" title="×">
+                                    <color key="titleColor" red="0.3194645941" green="0.65577900410000001" blue="0.97789329290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearDisplay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cQe-vW-S7y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="tGV-Cb-m1U" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="6ij-no-4cC"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mu5-EJ-kGU" secondAttribute="bottom" constant="20" id="8QR-IT-sD8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Mu5-EJ-kGU" secondAttribute="trailing" constant="10" id="Bre-WX-DkX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tGV-Cb-m1U" secondAttribute="trailing" constant="10" id="Icg-dP-hW7"/>
+                            <constraint firstItem="unL-ju-ruD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="hyL-S7-c1x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="unL-ju-ruD" secondAttribute="trailing" constant="20" id="jbs-ap-Tzb"/>
+                            <constraint firstItem="unL-ju-ruD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="kOK-TO-lRr"/>
                             <constraint firstItem="Mu5-EJ-kGU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="tAr-zS-s7O"/>
                         </constraints>
                         <connections>
@@ -173,6 +195,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="clear" destination="tGV-Cb-m1U" id="6ZC-i1-dZ7"/>
                         <outlet property="displayButton" destination="unL-ju-ruD" id="pw5-i5-c5R"/>
                     </connections>
                 </viewController>
@@ -183,7 +206,7 @@
                     </connections>
                 </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-428" y="182"/>
+            <point key="canvasLocation" x="-1188" y="-33"/>
         </scene>
     </scenes>
 </document>

@@ -13,9 +13,11 @@ class ViewController: UIViewController {
     var gradientLayer: CAGradientLayer!
     
     @IBOutlet weak var displayButton: UIButton!
+    @IBOutlet weak var clear: UIButton!
     
     fileprivate var userIsInTheMiddleOfTyping = false
     
+    fileprivate var brain = CalculatorBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +25,15 @@ class ViewController: UIViewController {
         createGradientLayer()
         
         displayButton.setTitleColor(UIColor.white, for: .normal)
+        clear.setTitleColor(UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.2), for: .normal)
         displayButton.titleLabel?.adjustsFontSizeToFitWidth = true
         
     }
     
-    
+    @IBAction func clearDisplay(_ sender: UIButton) {
+        displayButton.setTitle("0", for: .normal)
+        userIsInTheMiddleOfTyping = false
+    }
     
     @IBAction fileprivate func touchDigit(_ sender: UIButton) {
 
@@ -61,6 +67,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func touchOperator(_ sender: UIButton) {
+        if userIsInTheMiddleOfTyping {
+            brain.setOperand(displayValue)
+            userIsInTheMiddleOfTyping = false
+        }
+        if let mathematicalSymbol = sender.currentTitle {
+            brain.performOperation(mathematicalSymbol)
+        }
+        UIView.performWithoutAnimation {
+            displayButton.setTitle(String(brain.result), for: .normal)
+            displayButton.layoutIfNeeded()
+        }
     }
     
     
