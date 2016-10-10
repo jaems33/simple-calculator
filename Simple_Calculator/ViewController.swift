@@ -28,9 +28,21 @@ class ViewController: UIViewController {
         displayButton.setTitleColor(UIColor.white, for: .normal)
         clear.setTitleColor(UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.2), for: .normal)
         displayButton.titleLabel?.adjustsFontSizeToFitWidth = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+
+        // Re-position the display and clear button based on the digit and operations buttons
+        let newYPosition = (groupedButtons.frame.origin.y / 2) - (displayButton.frame.height / 2)
+        displayButton.frame.origin.y = newYPosition
+        displayButton.frame.origin.x = 20
         
-        
-        
+        let clearYPosition = displayButton.frame.origin.y + (displayButton.frame.height / 2) - (clear.frame.height / 2)
+        clear.frame.origin.y = clearYPosition
+    }
+    
+    @IBAction func copyValue(_ sender: UIButton) {
+        UIPasteboard.general.string = sender.currentTitle!
     }
     
     @IBAction func clearDisplay(_ sender: UIButton) {
@@ -40,7 +52,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction fileprivate func touchDigit(_ sender: UIButton) {
-
+        
         let digit = sender.currentTitle!
         
         if userIsInTheMiddleOfTyping == false {
@@ -54,6 +66,7 @@ class ViewController: UIViewController {
 
     }
     
+
     var displayValue: Double {
         get {
             return Double(displayButton.currentTitle!)!

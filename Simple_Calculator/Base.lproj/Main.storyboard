@@ -27,11 +27,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unL-ju-ruD" userLabel="Display Button">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unL-ju-ruD" userLabel="Display Button">
+                                <frame key="frameInset" minX="20" minY="60" width="313" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="DIN-Light" family="DIN-Light" pointSize="72"/>
                                 <state key="normal" title="0"/>
                                 <connections>
-                                    <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vj2-dB-6Em"/>
+                                    <action selector="copyValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cxg-9Y-hhG"/>
                                 </connections>
                             </button>
                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGV-Cb-m1U">
@@ -188,9 +190,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Mu5-EJ-kGU" secondAttribute="trailing" constant="10" id="Bre-WX-DkX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tGV-Cb-m1U" secondAttribute="trailing" constant="10" id="Icg-dP-hW7"/>
                             <constraint firstItem="Mu5-EJ-kGU" firstAttribute="top" relation="lessThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="350" id="R2T-da-T9i"/>
-                            <constraint firstItem="unL-ju-ruD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="hyL-S7-c1x"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="unL-ju-ruD" secondAttribute="trailing" constant="20" id="jbs-ap-Tzb"/>
-                            <constraint firstItem="unL-ju-ruD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="kOK-TO-lRr"/>
                             <constraint firstItem="Mu5-EJ-kGU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="tAr-zS-s7O"/>
                         </constraints>
                         <connections>
