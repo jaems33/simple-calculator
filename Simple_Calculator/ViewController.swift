@@ -86,11 +86,11 @@ class ViewController: UIViewController {
             brain.performOperation(mathematicalSymbol)
         }
 
-        let number = brain.result as NSNumber
         let formatter = NumberFormatter()
         formatter.minimumFractionDigits = 0
         formatter.maximumFractionDigits = 6
-        let stringValue = formatter.string(from: number)
+        formatter.numberStyle = NumberFormatter.Style.decimal
+        let stringValue = formatter.string(from: NSNumber(value: brain.result))
 
         updateDisplayWithoutAnimation(stringValue!)
     }
