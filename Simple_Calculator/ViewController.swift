@@ -66,7 +66,6 @@ class ViewController: UIViewController {
 
     }
     
-
     var displayValue: Double {
         get {
             return Double(displayButton.currentTitle!)!
@@ -77,6 +76,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func touchOperator(_ sender: UIButton) {
+
         if userIsInTheMiddleOfTyping {
             brain.setOperand(displayValue)
             brain.setPartialResult(true)
@@ -85,7 +85,14 @@ class ViewController: UIViewController {
         if let mathematicalSymbol = sender.currentTitle {
             brain.performOperation(mathematicalSymbol)
         }
-        updateDisplayWithoutAnimation(String(brain.result))
+
+        let number = brain.result as NSNumber
+        let formatter = NumberFormatter()
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 6
+        let stringValue = formatter.string(from: number)
+
+        updateDisplayWithoutAnimation(stringValue!)
     }
     
     
@@ -95,8 +102,6 @@ class ViewController: UIViewController {
             updateDisplayWithoutAnimation("0")
             userIsInTheMiddleOfTyping = true
         }
-        print("Decimal check:")
-        print(displayButton.currentTitle!.range(of: "."))
         
         if (displayButton.currentTitle!.range(of: ".")) == nil {
             updateDisplayWithoutAnimation(displayButton.currentTitle! + ".")

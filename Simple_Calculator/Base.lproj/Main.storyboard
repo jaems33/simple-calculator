@@ -36,7 +36,7 @@
                                     <action selector="copyValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cxg-9Y-hhG"/>
                                 </connections>
                             </button>
-                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGV-Cb-m1U">
+                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGV-Cb-m1U">
                                 <frame key="frameInset" minX="313" minY="60" width="30" height="100"/>
                                 <fontDescription key="fontDescription" name="DIN-Light" family="DIN-Light" pointSize="36"/>
                                 <state key="normal" title="×">
@@ -185,7 +185,6 @@
                         </subviews>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="tGV-Cb-m1U" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="6ij-no-4cC"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mu5-EJ-kGU" secondAttribute="bottom" constant="40" id="8QR-IT-sD8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Mu5-EJ-kGU" secondAttribute="trailing" constant="10" id="Bre-WX-DkX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tGV-Cb-m1U" secondAttribute="trailing" constant="10" id="Icg-dP-hW7"/>
