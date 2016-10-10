@@ -200,6 +200,7 @@
                     <connections>
                         <outlet property="clear" destination="tGV-Cb-m1U" id="6ZC-i1-dZ7"/>
                         <outlet property="displayButton" destination="unL-ju-ruD" id="pw5-i5-c5R"/>
+                        <outlet property="groupedButtons" destination="Mu5-EJ-kGU" id="ng2-mb-DWN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -209,7 +210,7 @@
                     </connections>
                 </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1554" y="-7"/>
+            <point key="canvasLocation" x="-2351" y="-43"/>
         </scene>
     </scenes>
 </document>

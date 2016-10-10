@@ -12,9 +12,14 @@ class CalculatorBrain {
     
     fileprivate var accumulator = 0.0
     fileprivate var pending:PendingBinaryOperation?
+    fileprivate var isPartialResult:Bool = false
     
     func setOperand(_ operand:Double){
         accumulator = operand
+    }
+    
+    func setPartialResult(_ status:Bool){
+        isPartialResult = status
     }
     
     var operations: [String: Operation] = [
@@ -47,6 +52,12 @@ class CalculatorBrain {
             accumulator = pending!.binaryFunction(pending!.firstOperand, accumulator)
             pending = nil
         }
+    }
+    
+    func clear(){
+        accumulator = 0.0
+        pending = nil
+        isPartialResult = false
     }
     
     struct PendingBinaryOperation {

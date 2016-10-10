@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var displayButton: UIButton!
     @IBOutlet weak var clear: UIButton!
+    @IBOutlet weak var groupedButtons: UIStackView!
     
     fileprivate var userIsInTheMiddleOfTyping = false
     
@@ -28,12 +29,14 @@ class ViewController: UIViewController {
         clear.setTitleColor(UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.2), for: .normal)
         displayButton.titleLabel?.adjustsFontSizeToFitWidth = true
         
+        
+        
     }
     
     @IBAction func clearDisplay(_ sender: UIButton) {
+        brain.clear()
         displayButton.setTitle("0", for: .normal)
         userIsInTheMiddleOfTyping = false
-        brain.setOperand(0.0)
     }
     
     @IBAction fileprivate func touchDigit(_ sender: UIButton) {
@@ -41,17 +44,10 @@ class ViewController: UIViewController {
         let digit = sender.currentTitle!
         
         if userIsInTheMiddleOfTyping == false {
-            // Necessary to prevent button from constantly re-animating upon title change
-            UIView.performWithoutAnimation {
-                displayButton.setTitle(digit, for: .normal)
-                displayButton.layoutIfNeeded()
-            }
+            updateDisplayWithoutAnimation(digit)
         }
         else {
-            UIView.performWithoutAnimation {
-                displayButton.setTitle(displayButton.currentTitle! + digit, for: .normal)
-                displayButton.layoutIfNeeded()
-            }
+            updateDisplayWithoutAnimation(displayButton.currentTitle! + digit)
         }
 
         userIsInTheMiddleOfTyping = true
@@ -70,19 +66,29 @@ class ViewController: UIViewController {
     @IBAction func touchOperator(_ sender: UIButton) {
         if userIsInTheMiddleOfTyping {
             brain.setOperand(displayValue)
+            brain.setPartialResult(true)
             userIsInTheMiddleOfTyping = false
         }
         if let mathematicalSymbol = sender.currentTitle {
             brain.performOperation(mathematicalSymbol)
         }
-        UIView.performWithoutAnimation {
-            displayButton.setTitle(String(brain.result), for: .normal)
-            displayButton.layoutIfNeeded()
-        }
+        updateDisplayWithoutAnimation(String(brain.result))
     }
     
     
     @IBAction func touchDecimal(_ sender: UIButton) {
+        
+        if userIsInTheMiddleOfTyping == false {
+            updateDisplayWithoutAnimation("0")
+            userIsInTheMiddleOfTyping = true
+        }
+        print("Decimal check:")
+        print(displayButton.currentTitle!.range(of: "."))
+        
+        if (displayButton.currentTitle!.range(of: ".")) == nil {
+            updateDisplayWithoutAnimation(displayButton.currentTitle! + ".")
+        }
+        
     }
     
     // Adding sample comment
@@ -91,6 +97,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func updateDisplayWithoutAnimation(_ result:String){
+        UIView.performWithoutAnimation {
+            displayButton.setTitle(result, for: .normal)
+            displayButton.layoutIfNeeded()
+        }
+    }
+    
     func createGradientLayer() {
         gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
