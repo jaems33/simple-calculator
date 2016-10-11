@@ -52,30 +52,39 @@
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wNb-wv-tMZ">
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wme-dc-b43" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wme-dc-b43" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
                                                         <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="24"/>
-                                                        <state key="normal" title="1"/>
+                                                        <state key="normal" title="1">
+                                                            <color key="titleColor" red="0.075261191140000003" green="0.56345087699999996" blue="0.94563972510000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mfQ-jc-jAR"/>
+                                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Lwz-iG-gc6"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWy-r7-5AR" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWy-r7-5AR" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
                                                         <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="24"/>
-                                                        <state key="normal" title="2"/>
+                                                        <state key="normal" title="2">
+                                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ldr-94-RMW"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kww-DM-AvH" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kww-DM-AvH" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
                                                         <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="24"/>
-                                                        <state key="normal" title="3"/>
+                                                        <state key="normal" title="3">
+                                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iZB-wv-6au"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsP-oh-yip" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
-                                                        <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="32"/>
-                                                        <state key="normal" title="÷"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsP-oh-yip" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
+                                                        <fontDescription key="fontDescription" name="DIN-Light" family="DIN-Light" pointSize="32"/>
+                                                        <state key="normal" title="÷">
+                                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAs-6E-XIl"/>
                                                         </connections>
@@ -84,30 +93,38 @@
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4oN-F0-nh1">
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEE-Ld-tFu" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEE-Ld-tFu" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
                                                         <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="24"/>
-                                                        <state key="normal" title="4"/>
+                                                        <state key="normal" title="4">
+                                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uUG-DV-U7f"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRd-40-el5" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRd-40-el5" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
                                                         <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="24"/>
-                                                        <state key="normal" title="5"/>
+                                                        <state key="normal" title="5">
+                                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4I1-Oa-ReW"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AL-qM-qAx" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AL-qM-qAx" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
                                                         <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="24"/>
-                                                        <state key="normal" title="6"/>
+                                                        <state key="normal" title="6">
+                                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="isf-2m-IEY"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96S-g2-Ykj" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
-                                                        <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="32"/>
-                                                        <state key="normal" title="×"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96S-g2-Ykj" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
+                                                        <fontDescription key="fontDescription" name="DIN-Light" family="DIN-Light" pointSize="32"/>
+                                                        <state key="normal" title="×">
+                                                            <color key="titleColor" red="0.075261191140000003" green="0.56345087699999996" blue="0.94563972510000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vNU-Ye-y4o"/>
                                                         </connections>
@@ -116,30 +133,38 @@
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2K2-KV-L3G">
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfm-T3-7TS" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfm-T3-7TS" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
                                                         <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="24"/>
-                                                        <state key="normal" title="7"/>
+                                                        <state key="normal" title="7">
+                                                            <color key="titleColor" red="0.3194645941" green="0.65577900410000001" blue="0.97789329290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LRR-iH-Jh7"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWP-Hi-Gxr" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWP-Hi-Gxr" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
                                                         <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="24"/>
-                                                        <state key="normal" title="8"/>
+                                                        <state key="normal" title="8">
+                                                            <color key="titleColor" red="0.3194645941" green="0.65577900410000001" blue="0.97789329290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jsj-jt-uC5"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAF-hc-ZT4" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAF-hc-ZT4" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
                                                         <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="24"/>
-                                                        <state key="normal" title="9"/>
+                                                        <state key="normal" title="9">
+                                                            <color key="titleColor" red="0.3194645941" green="0.65577900410000001" blue="0.97789329290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qkd-dk-sTG"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4IM-QR-JvD" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
-                                                        <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="32"/>
-                                                        <state key="normal" title="−"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4IM-QR-JvD" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
+                                                        <fontDescription key="fontDescription" name="DIN-Light" family="DIN-Light" pointSize="32"/>
+                                                        <state key="normal" title="−">
+                                                            <color key="titleColor" red="0.3194645941" green="0.65577900410000001" blue="0.97789329290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tGu-ZJ-MqD"/>
                                                         </connections>
@@ -148,30 +173,38 @@
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eFF-EZ-eBm">
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYZ-dk-P6J" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYZ-dk-P6J" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
                                                         <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="24"/>
-                                                        <state key="normal" title="0"/>
+                                                        <state key="normal" title="0">
+                                                            <color key="titleColor" red="0.075261191140000003" green="0.56345087699999996" blue="0.94563972510000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GM9-dg-evy"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mds-f2-8fA" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mds-f2-8fA" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
                                                         <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="24"/>
-                                                        <state key="normal" title="."/>
+                                                        <state key="normal" title=".">
+                                                            <color key="titleColor" red="0.075261191140000003" green="0.56345087699999996" blue="0.94563972510000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDecimal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D4A-hQ-xer"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yin-Eu-pg8" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
-                                                        <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="32"/>
-                                                        <state key="normal" title="="/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yin-Eu-pg8" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
+                                                        <fontDescription key="fontDescription" name="DIN-Light" family="DIN-Light" pointSize="32"/>
+                                                        <state key="normal" title="=">
+                                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TjX-C7-Dj4"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rew-UO-Gu0" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
-                                                        <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="32"/>
-                                                        <state key="normal" title="+"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rew-UO-Gu0" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
+                                                        <fontDescription key="fontDescription" name="DIN-Light" family="DIN-Light" pointSize="32"/>
+                                                        <state key="normal" title="+">
+                                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XwP-o9-Jz6"/>
                                                         </connections>
@@ -208,7 +241,7 @@
                     </connections>
                 </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-2351" y="-43"/>
+            <point key="canvasLocation" x="-3274" y="-169"/>
         </scene>
     </scenes>
 </document>
