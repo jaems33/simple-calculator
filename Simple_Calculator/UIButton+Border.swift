@@ -33,5 +33,15 @@ extension UIButton {
         self.layer.sublayers!.first!.frame = CGRect(x:0, y: self.frame.size.height - 1, width: self.frame.size.width, height: 1)
     }
     
+    public func highlightBorder(color: UIColor){
+        self.layer.sublayers!.first!.backgroundColor = color.cgColor
+    }
+    
+    public func borderReturnToNormal(color: UIColor){
+        UIView.animate(withDuration: 0.1, animations: {
+            self.layer.sublayers!.first!.backgroundColor = color.cgColor
+        }, completion: nil)
+    }
+    
 }
 

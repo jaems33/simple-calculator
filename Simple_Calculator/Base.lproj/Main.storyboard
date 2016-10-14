@@ -52,7 +52,7 @@
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wNb-wv-tMZ">
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wme-dc-b43" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wme-dc-b43" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
                                                         <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="24"/>
                                                         <state key="normal" title="1">
                                                             <color key="titleColor" red="0.075261191140000003" green="0.56345087699999996" blue="0.94563972510000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -62,13 +62,14 @@
                                                             <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Lwz-iG-gc6"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWy-r7-5AR" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWy-r7-5AR" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
                                                         <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="24"/>
                                                         <state key="normal" title="2">
                                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ldr-94-RMW"/>
+                                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="6an-Vg-Zra"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kww-DM-AvH" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
@@ -78,6 +79,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iZB-wv-6au"/>
+                                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="hic-95-HeE"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsP-oh-yip" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
@@ -86,6 +88,8 @@
                                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p5x-np-uIJ"/>
+                                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="xC4-Uz-M7q"/>
                                                             <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAs-6E-XIl"/>
                                                         </connections>
                                                     </button>
@@ -100,6 +104,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uUG-DV-U7f"/>
+                                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="uv8-PI-j4n"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRd-40-el5" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
@@ -109,6 +114,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4I1-Oa-ReW"/>
+                                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="1Dv-5h-7rM"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AL-qM-qAx" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
@@ -118,6 +124,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="isf-2m-IEY"/>
+                                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="QsO-Mw-7of"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96S-g2-Ykj" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
@@ -140,6 +147,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LRR-iH-Jh7"/>
+                                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="FXJ-c6-Zm1"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWP-Hi-Gxr" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
@@ -149,6 +157,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jsj-jt-uC5"/>
+                                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="INb-qi-TMO"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAF-hc-ZT4" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
@@ -158,6 +167,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qkd-dk-sTG"/>
+                                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="7sQ-0A-ol1"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4IM-QR-JvD" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
@@ -166,6 +176,7 @@
                                                             <color key="titleColor" red="0.3194645941" green="0.65577900410000001" blue="0.97789329290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="o0P-J5-09H"/>
                                                             <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tGu-ZJ-MqD"/>
                                                         </connections>
                                                     </button>
@@ -180,6 +191,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GM9-dg-evy"/>
+                                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Hpa-FA-44B"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mds-f2-8fA" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">

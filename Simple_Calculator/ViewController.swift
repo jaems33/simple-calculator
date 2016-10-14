@@ -52,12 +52,14 @@ class ViewController: UIViewController {
     }
     
 
-    @IBAction func touchDown(_ sender: UIButton) {
-        sender.contentScaleFactor = 3.0
-        sender.titleLabel!.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
+    @IBAction func touchDown(_ sender: UnderlinedButton) {
+        // sender.titleLabel!.bounds.width = sender.bounds.width
+        sender.onState()
+        
+        
     }
     
-    @IBAction fileprivate func touchDigit(_ sender: UIButton) {
+    @IBAction fileprivate func touchDigit(_ sender: UnderlinedButton) {
         
         let digit = sender.currentTitle!
         
@@ -67,16 +69,11 @@ class ViewController: UIViewController {
         else {
             updateDisplayWithoutAnimation(displayButton.currentTitle! + digit)
         }
-
-        sender.contentScaleFactor = 3.0
-        
+       
         userIsInTheMiddleOfTyping = true
         //sender.transform = CGAffineTransform(scaleX: 1, y: 1)
         // sender.titleLabel!.font = UIFont(name: sender.titleLabel!.font.fontName, size: 36)!
-        UIView.animate(withDuration: 0.1, animations: {
-            sender.titleLabel!.transform = CGAffineTransform(scaleX: 1, y: 1)
-            }, completion: nil)
-        
+        sender.scaleDownLabel()
     }
     
     var displayValue: Double {
