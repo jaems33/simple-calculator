@@ -53,10 +53,7 @@ class ViewController: UIViewController {
     
 
     @IBAction func touchDown(_ sender: UnderlinedButton) {
-        // sender.titleLabel!.bounds.width = sender.bounds.width
-        sender.onState()
-        
-        
+        sender.touchState()
     }
     
     @IBAction fileprivate func touchDigit(_ sender: UnderlinedButton) {
@@ -71,9 +68,7 @@ class ViewController: UIViewController {
         }
        
         userIsInTheMiddleOfTyping = true
-        //sender.transform = CGAffineTransform(scaleX: 1, y: 1)
-        // sender.titleLabel!.font = UIFont(name: sender.titleLabel!.font.fontName, size: 36)!
-        sender.scaleDownLabel()
+        sender.touchOffState()
     }
     
     var displayValue: Double {
@@ -85,7 +80,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func touchOperator(_ sender: UIButton) {
+    @IBAction func touchOperator(_ sender: UnderlinedButton) {
 
         if userIsInTheMiddleOfTyping {
             brain.setOperand(displayValue)
@@ -103,10 +98,11 @@ class ViewController: UIViewController {
         let stringValue = formatter.string(from: NSNumber(value: brain.result))
 
         updateDisplayWithoutAnimation(stringValue!)
+        sender.touchOffState()
     }
     
     
-    @IBAction func touchDecimal(_ sender: UIButton) {
+    @IBAction func touchDecimal(_ sender: UnderlinedButton) {
         
         if userIsInTheMiddleOfTyping == false {
             updateDisplayWithoutAnimation("0")
@@ -116,6 +112,8 @@ class ViewController: UIViewController {
         if (displayButton.currentTitle!.range(of: ".")) == nil {
             updateDisplayWithoutAnimation(displayButton.currentTitle! + ".")
         }
+        
+        sender.touchOffState()
         
     }
     

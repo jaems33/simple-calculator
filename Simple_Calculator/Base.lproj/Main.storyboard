@@ -133,6 +133,7 @@
                                                             <color key="titleColor" red="0.075261191140000003" green="0.56345087699999996" blue="0.94563972510000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="NQb-gj-2Dg"/>
                                                             <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vNU-Ye-y4o"/>
                                                         </connections>
                                                     </button>
@@ -201,6 +202,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="touchDecimal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D4A-hQ-xer"/>
+                                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="a48-aM-gZJ"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yin-Eu-pg8" userLabel="Digit" customClass="UnderlinedButton" customModule="Simple_Calculator" customModuleProvider="target">
@@ -209,6 +211,7 @@
                                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="KNH-Tm-12U"/>
                                                             <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TjX-C7-Dj4"/>
                                                         </connections>
                                                     </button>
@@ -218,6 +221,7 @@
                                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="L6N-x5-lf3"/>
                                                             <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XwP-o9-Jz6"/>
                                                         </connections>
                                                     </button>

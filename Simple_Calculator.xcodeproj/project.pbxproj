@@ -10,6 +10,7 @@
 		5B2C458D1DA59AA5003EF848 /* UIButton+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2C458C1DA59AA5003EF848 /* UIButton+Border.swift */; };
 		5B2C458F1DA6AE3B003EF848 /* UnderlinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2C458E1DA6AE3B003EF848 /* UnderlinedButton.swift */; };
 		5B2C45911DA6D0AC003EF848 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2C45901DA6D0AC003EF848 /* CalculatorBrain.swift */; };
+		5B2C45931DB0855D003EF848 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2C45921DB0855C003EF848 /* GradientBackground.swift */; };
 		5B9BB2AB1DA4ACD600034368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9BB2AA1DA4ACD600034368 /* AppDelegate.swift */; };
 		5B9BB2AD1DA4ACD600034368 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9BB2AC1DA4ACD600034368 /* ViewController.swift */; };
 		5B9BB2B01DA4ACD600034368 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9BB2AE1DA4ACD600034368 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		5B2C458C1DA59AA5003EF848 /* UIButton+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Border.swift"; sourceTree = "<group>"; };
 		5B2C458E1DA6AE3B003EF848 /* UnderlinedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnderlinedButton.swift; sourceTree = "<group>"; };
 		5B2C45901DA6D0AC003EF848 /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
+		5B2C45921DB0855C003EF848 /* GradientBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 		5B9BB2A71DA4ACD600034368 /* Simple_Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simple_Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9BB2AA1DA4ACD600034368 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B9BB2AC1DA4ACD600034368 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				5B9BB2DB1DA4AEC000034368 /* Supporting Files */,
 				5B9BB2AC1DA4ACD600034368 /* ViewController.swift */,
 				5B9BB2AE1DA4ACD600034368 /* Main.storyboard */,
+				5B2C45921DB0855C003EF848 /* GradientBackground.swift */,
 				5B2C458C1DA59AA5003EF848 /* UIButton+Border.swift */,
 				5B9BB2BC1DA4AEAD00034368 /* Fonts */,
 				5B2C458E1DA6AE3B003EF848 /* UnderlinedButton.swift */,
@@ -228,6 +231,7 @@
 				5B2C458D1DA59AA5003EF848 /* UIButton+Border.swift in Sources */,
 				5B2C45911DA6D0AC003EF848 /* CalculatorBrain.swift in Sources */,
 				5B2C458F1DA6AE3B003EF848 /* UnderlinedButton.swift in Sources */,
+				5B2C45931DB0855D003EF848 /* GradientBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

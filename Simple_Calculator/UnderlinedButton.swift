@@ -12,7 +12,7 @@ import UIKit
 public class UnderlinedButton: UIButton {
     
     fileprivate let borderColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.1)
-    fileprivate let borderColorHighlight = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+    fileprivate let borderColorHighlight = UIColor.white
     public var label = UILabel()
     fileprivate var firstTimeLoaded = false
     fileprivate var desiredText = String()
@@ -50,20 +50,27 @@ public class UnderlinedButton: UIButton {
     }
     
     public func createLabel(){
-        label = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height))
-        label.font = UIFont(name: "DIN-Regular", size: fontSize)
+        var ascenderAdjustment = CGFloat(0)
+        var fontName = "DIN-Regular"
+        if (fontSize != 24.0){
+            fontName = "DIN-Light"
+            ascenderAdjustment = CGFloat(5)
+        }
+        label = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height - ascenderAdjustment))
+        label.font = UIFont(name: fontName, size: fontSize)
         label.textAlignment = NSTextAlignment.center
+        label.baselineAdjustment = UIBaselineAdjustment(rawValue: 5)!
         label.text = desiredText
         label.textColor = UIColor.white
         self.addSubview(label)
     }
     
-    public func onState(){
-        label.transform = CGAffineTransform(scaleX: 2, y: 2)
+    public func touchState(){
+        label.transform = CGAffineTransform(scaleX: 1.8, y: 1.8)
         self.highlightBorder(color: borderColorHighlight)
     }
     
-    public func scaleDownLabel(){
+    public func touchOffState(){
         UIView.animate(withDuration: 0.1, animations: {
             self.label.transform = CGAffineTransform(scaleX: 1, y: 1)
             }, completion: nil)
